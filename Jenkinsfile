@@ -29,5 +29,14 @@ pipeline {
             archiveArtifacts 'target/*.jar'
           }
     }
+    stage('Email building stage'){
+        steps{
+            mail bcc: '', body: '''Hello Eclairs,
+The declarative pipeline is being build
+
+Regards,
+Jenkins Admin''', cc: '', from: '', replyTo: '', subject: 'Remarks of Jenkins Learning', to: 'ishanimalviya333@gmail.com'
+        }
+    }
 }
 }
