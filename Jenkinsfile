@@ -23,9 +23,11 @@ pipeline {
             }
         }
         stage('Result'){
-          input("Do you want the result ?")
-          junit '**/target/surefire-reports/TEST-*.xml'
-          archiveArtifacts 'target/*.jar'
+          step{
+            input("Do you want the result ?")
+            junit '**/target/surefire-reports/TEST-*.xml'
+            archiveArtifacts 'target/*.jar'
+          }
     }
 }
 }
