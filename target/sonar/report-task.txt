@@ -1,0 +1,6 @@
+projectKey=user.training.com:HelloWorld
+serverUrl=http://localhost:9000
+serverVersion=10.5.1.90531
+dashboardUrl=http://localhost:9000/dashboard?id=user.training.com%3AHelloWorld
+ceTaskId=5bf04af5-008a-435f-8387-040f1725ec89
+ceTaskUrl=http://localhost:9000/api/ce/task?id=5bf04af5-008a-435f-8387-040f1725ec89
