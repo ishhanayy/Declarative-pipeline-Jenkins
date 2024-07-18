@@ -3,14 +3,44 @@
   <groupId>user.training.com</groupId>
   <artifactId>HelloWorld</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+<maven.compiler.target>1.8</maven.compiler.target>
+<sonar.host.url>http://localhost:9000</sonar.host.url>
+<sonar.token>sqa_ff24abae20c78fe8a0a414bf757fbcc21b0d1679</sonar.token>
+  </properties>
   <dependencies>
-	<!-- https://mvnrepository.com/artifact/junit/junit -->
+<!--  JUnit Dependency  -->
 <dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>4.13.2</version>
-    <scope>test</scope>
+<groupId>junit</groupId>
+<artifactId>junit</artifactId>
+<version>4.13.2</version>
+<scope>test</scope>
 </dependency>
-
-  </dependencies>
+<!--  Logback Dependencies  -->
+<dependency>
+<groupId>ch.qos.logback</groupId>
+<artifactId>logback-classic</artifactId>
+<version>1.5.6</version>
+<scope>test</scope>
+</dependency>
+<dependency>
+<groupId>ch.qos.logback</groupId>
+<artifactId>logback-core</artifactId>
+<version>1.5.6</version>
+<scope>test</scope>
+</dependency>
+</dependencies>
+<plugin>
+<groupId>org.sonarsource.scanner.maven</groupId>
+<artifactId>sonar-maven-plugin</artifactId>
+<version>4.0.0.4121</version>
+<executions>
+<execution>
+<goals>
+<goal>sonar</goal>
+</goals>
+</execution>
+</executions>
+</plugin>
 </project>
