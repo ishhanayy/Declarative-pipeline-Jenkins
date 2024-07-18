@@ -22,6 +22,12 @@ pipeline {
 
             }
         }
+        stage("SonarQube Analysis"){
+              steps{
+                  echo 'sonarqube analysis going on..'
+                  bat "mvn sonar:sonar"
+              }
+        }
         stage('Result'){
           steps{
             input("Do you want the result ?")
